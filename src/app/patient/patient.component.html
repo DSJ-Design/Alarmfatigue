@@ -1,0 +1,6 @@
+<h1>{{patient.name}} - {{patient.room}}</h1>
+<p>{{patient.age}} jaar</p>
+<p>{{patient.disease}}</p>
+<ul>
+  <li *ngFor="let m of patient.medication">{{m}}</li>
+</ul>

@@ -1,0 +1,17 @@
+<div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-3 mx-auto py-6 ">
+  <div *ngFor="let p of patients" class="border border-dark">
+    <a routerLink="/patient/{{p.id}}">
+    <h3 class="text-center">{{p.name}} - kamer {{p.room}}</h3>
+    <div class="grid grid-cols-2 gap-0">
+      <div>
+        <img src="./assets/patient.webp" class="w-3/4 h-auto" alt="">
+      </div>
+      <div >
+        <iframe class="lg:w-100 lg:h-500" src="https://www.youtube.com/embed/jcXidSeirMU?autoplay=1&loop=1&mute=1&playlist=jcXidSeirMU&controls=0&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        <p id="info{{p.id}}" *ngIf="p.alarm">ALARM</p>
+      </div>
+    </div>
+  </a>
+  </div>
+</div>
+
