@@ -1,6 +1,34 @@
-<h1>{{patient.name}} - {{patient.room}}</h1>
-<p>{{patient.age}} jaar</p>
-<p>{{patient.disease}}</p>
-<ul>
-  <li *ngFor="let m of patient.medication">{{m}}</li>
-</ul>
+<section class="text-gray-600 body-font overflow-hidden">
+  <div class="container px-5 py-24 mx-auto">
+    <button routerLink="/" class="bg-transparent mb-4 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+      Terug
+    </button>
+    <div class="lg:w-4/5 mx-auto flex flex-wrap">
+      <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+        <h2 class="text-sm title-font text-gray-500 tracking-widest">Kamer {{patient.room}}</h2>
+        <h1 class="text-gray-900 text-3xl title-font font-medium">{{patient.name}}</h1>
+        <div class="flex mb-4">
+          <a class="flex-grow text-blue-500 border-b-2 border-blue-500 py-2 text-lg px-1">{{patient.disease | titlecase}} - {{patient.age}} jaar</a>
+        </div>
+        <div class="flex mt-4">
+          <a class="flex-grow text-black border-b-2 py-1 border-black text-lg px-1">Medicatie</a>
+        </div>
+        <div *ngFor="let m of patient.medication" class="flex border-b ml-1 border-gray-200 py-2">
+          <span class="text-gray-500">{{m}}</span>
+          <!-- <span class="ml-auto text-gray-900">Medicatie</span> -->
+        </div>
+      </div>
+      <img alt="monitor" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="../../assets/patientroom.jpg">
+      <div *ngIf="patient.alarm" class="w-full mt-6">
+        <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
+          Alarm
+        </div>
+        <div
+          class="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700"
+        >
+          <p>Er gaat iets niet goed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
