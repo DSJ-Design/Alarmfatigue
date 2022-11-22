@@ -7,7 +7,20 @@
     "room": 5,
     "disease": "hersentumor",
     "medication": ["Paracetamol", "Chemotherapie"],
-    "alarm": false
+    "alarm": [
+      {
+        "name": "Beademingstoestel",
+        "value": 20
+      },
+      {
+        "name": "Spuitpomp",
+        "value": 20
+      },
+      {
+        "name": "Medicatiepomp",
+        "value": 20
+      }
+    ]
     },
     {
       "id": 2,
