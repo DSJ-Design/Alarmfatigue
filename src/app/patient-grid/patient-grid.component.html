@@ -1,10 +1,10 @@
-<section
+<!-- <section
   (click)="detail(patient.id)"
-  class="mx-1 text-gray-600 bg-gray-50 border-gray-900 rounded border-2 body-font col"
+  class="mx-1 text-gray-600 rounded shadow-lg  bg-gray-100 body-font col"
 >
   <div class="flex md:flex-row flex-col items-center">
     <div class="w-1/2 grid grid-cols-1">
-      <img class="col mb-1" alt="hero" src="../../assets/monitor.gif" />
+      <img id="{{patient.id}}" [style]="animation(patient.id)" class="col mb-1" alt="hero" src="../../assets/monitor.gif" />
       <img class="col" alt="hero" src="../../assets/patientroom.jpg" />
     </div>
 
@@ -29,6 +29,39 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="w-full grid grid-rows-4 h-[49vh]" (click)="detail(patient.id)">
+  <div class="grid grid-cols-5 row-span-2">
+    <div class="col-span-2 grid grid-rows-3">
+      <div class="row-span-1">
+        <h1 class="grid grid-rows-2 px-2 pt-2">
+          <span class="row text-lg text-gray-900">{{ patient.name }}</span>
+          <span class="row text-xs text-gray-600"
+            >Kamer {{ patient.room }}</span
+          >
+        </h1>
+      </div>
+      <img
+        class="row-span-2 px-2"
+        src="../../assets/camera{{ patient.id }}.gif"
+        alt="video {{ patient.name }}"
+      />
+    </div>
+    <div class="col-span-3">
+      <img
+        id="{{ patient.id }}"
+        class=""
+        alt="hero"
+        src="../../assets/monitor.gif"
+      />
+    </div>
+  </div>
+  <div class="row-span-2 bg-blue-200 grid grid-rows-3">
+    <div *ngFor="let a of patient.alarm" class="border row border-red-400 rounded-b bg-red-100 px-3 py-2 text-red-700"  >
+      <p>{{ a.name }}</p>
     </div>
   </div>
 </section>

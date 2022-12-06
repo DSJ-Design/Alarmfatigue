@@ -18,4 +18,8 @@ export class PatientGridComponent implements OnInit {
     this.router.navigate(["patient/", id])
   }
 
+  animation(id: number) {
+    return `animation-delay: ${id}s;`
+  }
+
 }
