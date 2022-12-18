@@ -28,7 +28,7 @@ export class PatientComponent implements OnInit {
         });
 
       }, (err) => {
-        console.log("fuck")
+        console.log("generate new api at jsonbin.io")
       }
     );
   }
