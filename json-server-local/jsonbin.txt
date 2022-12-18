@@ -1,0 +1,51 @@
+[
+    {
+    "id": 1,
+    "name": "Jos Vermeulen",
+    "age": 70,
+    "room": 5,
+    "disease": "hersentumor",
+    "medication": ["Paracetamol", "Chemotherapie"],
+    "alarm": [
+      {
+        "name": "Beademingstoestel",
+        "value": 20
+      },
+      {
+        "name": "Spuitpomp",
+        "value": 20
+      },
+      {
+        "name": "Medicatiepomp",
+        "value": 20
+      }
+    ]
+    },
+    {
+      "id": 2,
+      "name": "Jeanine Janssens",
+      "age": 85,
+      "room": 10,
+      "disease": "hartproblemen",
+      "medication": ["Nitroglycerin", "Statins"],
+      "alarm": true
+    },
+    {
+      "id": 3,
+      "name": "Nick Peeters",
+      "age": 15,
+      "room": "30",
+      "disease": "beroerte",
+      "medication": ["Alteplase", "Dipyridamole"],
+      "alarm": false
+    },
+    {
+      "id": 4,
+      "name": "Els Opdebeeck",
+      "age": 13,
+      "room": 7,
+      "disease": "Overdosis drugs",
+      "medication": ["Naloxone"],
+      "alarm": true
+    }
+  ]
