@@ -7,16 +7,16 @@ import { Observable, switchMap, timer } from 'rxjs';
   providedIn: 'root'
 })
 export class PatientService {
-  baseUrl = "http://localhost:3000/patients/";
+  baseUrl = "https://api.jsonbin.io/v3/qs/639f912301a72b59f233f453/";
   constructor(private httpClient: HttpClient) {
   }
 
-  getPatients(): Observable<Patient[]> {
-    return this.httpClient.get<Patient[]>(this.baseUrl);
+  getPatients(): Observable<any> {
+    return this.httpClient.get<any>(this.baseUrl);
   }
 
-  getPatientById(id: any): Observable<Patient> {
-    return this.httpClient.get<Patient>(this.baseUrl + id);
+  getPatientById(id: any): Observable<any> {
+    return this.httpClient.get<any>(this.baseUrl + id);
   }
 
   /*updateAlarm(id: any, name:string, value:number): Observable<any>{
