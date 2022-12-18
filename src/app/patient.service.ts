@@ -15,9 +15,7 @@ export class PatientService {
     return this.httpClient.get<any>(this.baseUrl);
   }
 
-  getPatientById(id: any): Observable<any> {
-    return this.httpClient.get<any>(this.baseUrl + id);
-  }
+
 
   /*updateAlarm(id: any, name:string, value:number): Observable<any>{
     const headers = { 'content-type': 'application/json'};

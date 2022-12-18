@@ -5,21 +5,21 @@
     </button>
     <div class="lg:w-4/5 mx-auto flex flex-wrap">
       <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
-        <h2 class="text-sm title-font text-gray-500 tracking-widest">Kamer {{patient.room}}</h2>
-        <h1 class="text-gray-900 text-3xl title-font font-medium">{{patient.name}}</h1>
+        <h2 class="text-sm title-font text-gray-500 tracking-widest">Kamer {{patient?.room}}</h2>
+        <h1 class="text-gray-900 text-3xl title-font font-medium">{{patient?.name}}</h1>
         <div class="flex mb-4">
-          <a class="flex-grow text-blue-500 border-b-2 border-blue-500 py-2 text-lg px-1">{{patient.disease | titlecase}} - {{patient.age}} jaar</a>
+          <a class="flex-grow text-blue-500 border-b-2 border-blue-500 py-2 text-lg px-1">{{patient?.disease | titlecase}} - {{patient?.age}} jaar</a>
         </div>
         <div class="flex mt-4">
           <a class="flex-grow text-black border-b-2 py-1 border-black text-lg px-1">Medicatie</a>
         </div>
-        <div *ngFor="let m of patient.medication" class="flex border-b ml-1 border-gray-200 py-2">
+        <div *ngFor="let m of patient?.medication" class="flex border-b ml-1 border-gray-200 py-2">
           <span class="text-gray-500">{{m}}</span>
           <!-- <span class="ml-auto text-gray-900">Medicatie</span> -->
         </div>
       </div>
       <img alt="monitor" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="../../assets/patientroom.jpg">
-      <div *ngIf="patient.alarm" class="w-full mt-6">
+      <div *ngIf="patient?.alarm" class="w-full mt-6">
         <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
           Alarm
         </div>
