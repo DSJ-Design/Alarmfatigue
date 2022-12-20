@@ -9,7 +9,7 @@ import { PatientService } from '../patient.service';
   styleUrls: ['./patient.component.css']
 })
 export class PatientComponent implements OnInit {
-  patient !: Patient ;
+  patient !: any ;
   patients !: Patient[];
 
   constructor(private route:ActivatedRoute, private patientService: PatientService) { }
