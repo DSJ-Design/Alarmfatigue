@@ -24,17 +24,38 @@
       />
     </div>
   </div>
-  <div class="row-span-2 grid grid-rows-3">
 
-      <div  *ngIf="beademingsToestel" class="border row border-red-400 rounded bg-red-100 px-3 py-2 text-red-700" >
-        <p>BeademingsToestel</p>
-      </div>
-      <div  *ngIf="spuitPomp < 15" class="border row border-red-400 rounded bg-red-100 px-3 py-2 text-red-700" >
-        <p>Spuitpomp</p>
-      </div>
-      <div  *ngIf="medicatiePomp < 15" class="border row border-red-400 rounded bg-red-100 px-3 py-2 text-red-700" >
-        <p>Medicatiepomp</p>
-      </div>
 
-  </div>
+     <!-- <div  *ngIf="patient.alarm[0].value != ''" class="border row border-red-400 rounded bg-red-100 px-3 py-2 text-red-700" >
+        <p>{{patient.alarm[0].name}} - <b>{{patient.alarm[0].value}}</b></p>
+      </div>
+      <div  *ngIf="patient.alarm[1].value > 15" class="border row border-green-400 rounded bg-green-100 px-3 py-2 text-green-700" >
+        <p>{{patient.alarm[1].name}} - <b>{{patient.alarm[1].value}}cc/ml</b></p>
+      </div>
+      <div  *ngIf="patient.alarm[1].value <= 15 && patient.alarm[1].value > 5" class="border row border-orange-400 rounded bg-orange-100 px-3 py-2 text-orange-700" >
+        <p>{{patient.alarm[1].name}} - <b>{{patient.alarm[1].value}}cc/ml</b></p>
+      </div>
+      <div  *ngIf="patient.alarm[1].value <= 5" class="border row border-red-400 rounded bg-red-100 px-3 py-2 text-red-700" >
+        <p >{{patient.alarm[1].name}} - <b>{{patient.alarm[1].value}}cc/ml</b></p>
+      </div>
+      <div  *ngIf="patient.alarm[2].value > 15" class="border row border-green-400 rounded bg-green-100 px-3 py-2 text-green-700" >
+        <p>{{patient.alarm[2].name}} - <b>{{patient.alarm[2].value}}cc/ml</b></p>
+      </div>
+      <div  *ngIf="patient.alarm[2].value <= 15 && patient.alarm[2].value > 5" class="border row border-orange-400 rounded bg-orange-100 px-3 py-2 text-orange-700" >
+        <p>{{patient.alarm[2].name}} - <b>{{patient.alarm[2].value}}cc/ml</b></p>
+      </div>
+      <div  *ngIf="patient.alarm[2].value <= 5" class="border row border-red-400 rounded bg-red-100 px-3 py-2 text-red-700" >
+        <p>{{patient.alarm[2].name}} - <b>{{patient.alarm[2].value}}cc/ml</b></p>
+      </div>-->
+
+      <div class="border row border-gray-400 rounded bg-gray-100 px-3 py-2" >
+        <p *ngIf="patient.alarm[0].value != ''" class="text-red-700">{{patient.alarm[0].name}} - <b>{{patient.alarm[0].value}}</b></p>
+        <p  class="text-green-700" *ngIf="patient.alarm[1].value > 15">{{patient.alarm[1].name}} - <b>{{patient.alarm[1].value}}cc/ml</b></p>
+        <p  class="text-orange-700" *ngIf="patient.alarm[1].value <= 15 && patient.alarm[1].value > 5">{{patient.alarm[1].name}} - <b>{{patient.alarm[1].value}}cc/ml</b></p>
+        <p  class="text-red-700" *ngIf="patient.alarm[1].value <= 5">{{patient.alarm[1].name}} - <b>{{patient.alarm[1].value}}cc/ml</b></p>
+        <p  class="text-green-700" *ngIf="patient.alarm[2].value > 15">{{patient.alarm[2].name}} - <b>{{patient.alarm[2].value}}cc/ml</b></p>
+        <p  class="text-orange-700" *ngIf="patient.alarm[2].value <= 15 && patient.alarm[2].value > 5">{{patient.alarm[2].name}} - <b>{{patient.alarm[1].value}}cc/ml</b></p>
+        <p  class="text-red-700" *ngIf="patient.alarm[2].value <= 5">{{patient.alarm[2].name}} - <b>{{patient.alarm[2].value}}cc/ml</b></p>
+</div>
+
 </section>
