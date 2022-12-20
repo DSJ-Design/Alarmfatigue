@@ -8,11 +8,12 @@ import { PatientService } from '../patient.service';
   styleUrls: ['./patients.component.css']
 })
 export class PatientsComponent implements OnInit {
-serverDown:boolean = true;
+serverDown:boolean = false;
   patients!: Patient[];
   constructor(private patientService: PatientService) { }
 
   ngOnInit(): void {
+    //this.patientService.getPatients().subscribe(res => this.patients = res)
     this.patientService.getPatients().subscribe(
       (res) => {
         this.patients = res.record;
