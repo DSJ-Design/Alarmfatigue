@@ -8,7 +8,7 @@ import { Observable, switchMap, timer } from 'rxjs';
 })
 export class PatientService {
   //baseUrl = "https://api.jsonbin.io/v3/qs/639f912301a72b59f233f453/";
-  baseUrl = "https://api.jsonbin.io/v3/qs/63a1d959dfc68e59d56d15f9"
+  baseUrl = "https://api.jsonbin.io/v3/qs/63a2261a15ab31599e2145f7"
   constructor(private httpClient: HttpClient) {
   }
 
